@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <div style="text-align: center">
+        <h1>Diet Recommendation</h1>
+
+
+        <div class="log-container container">
+            <h2>Give Details</h2>
+            <form action="{{ url_for('recommend') }}" method="post">
+                <label>Age:</label>
+                <input type="number" name="age" required>
+                <br>
+                <label>Gender:</label>
+                <select name="sex">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <br>
+                <label>Weight:</label>
+                <input type="number" name="weight" required>
+                <br>
+                <label>Height:</label>
+                <input type="number" name="height" required>
+                <br>
+                <label>Activity Level:</label>
+                <select name="activity_level">
+                    <option value="sedentary">Sedentary</option>
+                    <option value="lightly_active">Lightly Active</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="very_active">very Active</option>
+                    <option value="extra_active">Extra Active</option>
+                </select>
+                <br>
+                <label>Goal:</label>
+                <select name="goal">
+                    <option value="weight_loss">Weight Loss</option>
+                    <option value="weight_gain">Weight Gain</option>
+                    <option value="maintenance">Maintenance</option>
+                </select>
+                <br>
+                <label>Diet Preference:</label>
+                <select name="diet_preference">
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="non_vegetarian">Non-Vegetarian</option>
+                </select>
+                <br>
+                <label>Number of Recipes:</label>
+                <input type="number" name="n" required>
+                <br>
+                <br>
+                <button type="submit">Recommend</button>
+            </form>
+        </div>
+        <br>
+        <div class="recipe-container container">
+            {% for rec in recommendations %}
+            <h2>{{ rec.Name }}</h2>
+            <p><strong>Calories:</strong> {{ rec.Calories }}</p>
+            <p><strong>Protein:</strong> {{ rec.ProteinContent }}</p>
+            <p><strong>Fat:</strong> {{ rec.FatContent }}</p>
+            <p><strong>Carbs:</strong> {{ rec.CarbohydrateContent }}</p>
+            <p><strong>Sodium:</strong> {{ rec.SodiumContent }}</p>
+            <p><strong>**Recipe Instructions**</strong></p>
+            <p> {{ rec.RecipeInstructions }}</p>
+            <hr>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

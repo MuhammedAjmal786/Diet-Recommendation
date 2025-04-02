@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: url('/static/food4.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* container styles */
+.log-container {
+    background-color: #7a7575a6;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px #0000001a;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Texts styles */
+.recipe-container {
+    background-color: #7a7575b4;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px #0000001a;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    visibility: visible; /* Ensure headings are visible */
+}
+h2{
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 11px;
+    visibility: visible; /* Ensure headings are visible */
+}
+h3 {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    visibility: visible; /* Ensure headings are visible */
+}
+
+p {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    visibility: visible; /* Ensure headings are visible */
+}
+
+label {
+    text-align: left;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    display: block; /* Ensure labels are on a new line */
+}
+
+/* Adds Seperating line */
+hr {
+    border: 1px solid #ffffff;
+    margin: 20px 0;  /* Adds spacing */
+}
+
+/* input boxes styling*/
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 3px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #000000;
+    transition: border-color 0.3s ease;
+    border-color: #FF7043; 
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    outline: none;
+    border-color: #29b330; /* Highlight on focus */
+}
+
+/* Button styling */
+button {
+    background-color: #e4643d;
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Full width button */
+}
+
+button:hover {
+    background-color: #a15943;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .container{
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+}
