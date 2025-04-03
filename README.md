@@ -101,12 +101,27 @@ ________________________________________
 
 •	**style.css**: 
 
-    o	Responsive design with a food-themed background, centered containers, and styled inputs/buttons.
+    o	Responsive design with a food-themed background, centered containers, and styled inputs & buttons.
 
 ## Dataset Preprocessing
 •	**Name Column**: Removed special characters and normalized whitespace.
 
 •	**RecipeInstructions**: Stripped leading/trailing quotes and punctuation for consistent filtering.
+________________________________________
+## 📂 Project Structure
+```
+📦 Diet Recommendation System
+├── 📂 app.py         # Contains Flask application logic and database models
+├── 📂 viewdatabase.py     # Python file to view database
+templates/
+├── 📂 web.html
+static/
+├── 📂 style.css
+
+
+├── 📜 LICENSE           # License file
+├── 📜 README.md         # Project Documentation
+```
 ________________________________________
 ## Problem Solving and Optimizations
 **Challenge: Slow Recommendation Generation**
@@ -157,5 +172,30 @@ ________________________________________
 ## Conclusion
 The Diet Recommendation System is a functional and user-friendly tool that demonstrates the application of nutritional science, machine learning (cosine similarity), and web development. By addressing challenges like dataset size, text preprocessing, and responsiveness, the project provides a solid foundation for further development. It serves as an excellent portfolio piece, showcasing skills in Python, Flask, data processing, and UI design.
 ________________________________________
-Github Repository:   https://github.com/MuhammedAjmal786/Diet-Recommendation
+## 🚀 Installation & Usage
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/MuhammedAjmal786/Diet-Recommendation.git
+   cd Diet-Recommendation
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install flask
+   ```
+
+3. Run the applications:
+   - **Flask App**:
+     ```bash
+     cd app.py
+     python app.py
+     ```
+________________________________________
+## 🤝 Contributing
+Contributions are welcome! Feel free to submit issues or pull requests.
+
+## 📜 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 ## THANK YOU
